@@ -5,9 +5,6 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-gem 'carrierwave' # gem for uploading images
-gem 'high_voltage' # gem for static pages
-gem 'foreigner' # gem for foreign key management
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,6 +26,12 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+# Things I've added
+gem 'carrierwave' # gem for uploading images
+gem 'high_voltage' # gem for static pages
+gem 'foreigner' # gem for foreign key management
+gem 'mini_magick' # gem for handling thumbnails
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
