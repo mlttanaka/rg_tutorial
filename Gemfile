@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'carrierwave' # gem for uploading images
 gem 'high_voltage' # gem for static pages
+gem 'foreigner' # gem for foreign key management
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
