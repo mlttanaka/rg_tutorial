@@ -33,6 +33,7 @@ gem 'high_voltage' # gem for static pages
 gem 'foreigner' # gem for foreign key management
 gem 'mini_magick' # gem for handling thumbnails
 gem 'bootstrap-sass' # gem for Twitter Bootstrap style.
+gem 'devise' # gem for user authentication
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
