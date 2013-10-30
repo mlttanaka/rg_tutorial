@@ -1,33 +1,21 @@
-<h1>Idea List</h1>
+<div>
+	<h1>Idea List&nbsp;<button type="button" class="btn btn-warning">
+	  <%= link_to 'New Idea', new_idea_path %>
+	</button></h1>
+	
+</div>
+<div class="container">
+  <% @ideas.in_groups_of(4, false) do |group| %>
+    <div class="row-fluid">
+	  <ul class="thumbnails">
+	    <% group.compact.each do |idea| %>
+		  <div class="thumbnail-row">
+		    <%= link_to image_tag(idea.picture_url(:medium),:class => "thumbnail"), idea %>
+	  	    <div class="caption"><%= idea.name %></div>
+		  </div>	
+	    <% end %>  
+	  </ul>
+    </div>
+  <% end %>
+</div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ideas.each do |idea| %>
-      <tr>
-        <td><%= idea.name %></td>
-        <td><%= idea.description %></td>
-        <td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<button type="button" class="btn btn-warning">
-  <%= link_to 'New Idea', new_idea_path %>
-</button>

@@ -38,6 +38,7 @@
   </div>
   <div class="container">
     <div class="jumbotron">
+		<div class="container">
       <% if notice %>
         <p class="alert alert-notice"><%= notice %></p>
       <% end %>
@@ -45,6 +46,7 @@
         <p class="alert alert-error"><%= alert %></p>
       <% end %>
       <%= yield %>
+	  </div>
     </div>
   </div>
   <footer>

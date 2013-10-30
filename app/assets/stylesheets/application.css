@@ -14,4 +14,16 @@
  */
  body a:hover {
    text-decoration: none !important;
+   color: #999;
+ }
+   
+ .thumbnail:hover {
+   border: 2px solid #DB7093;
+ }
+ 
+ .thumbnail-row {
+   display: inline-block;
+   width: 200px;
+   height: 100px;
+   margin: 1em;
  }
